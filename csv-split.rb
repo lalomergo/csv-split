@@ -33,12 +33,11 @@ CSV.foreach(file, {headers: true, encoding: "windows-1251:utf-8", quote_char: '"
         csv << d
       end
 
-
-    end
-    file_int = file_int + 1
+    end #close CSV do
+    file_int += 1
     new_file = sprintf new_file_tmp, file_int
     col_data = []
 
-  end
-  index = index + 1
-end
+  end #close if
+  index += 1
+end #close CSV do
